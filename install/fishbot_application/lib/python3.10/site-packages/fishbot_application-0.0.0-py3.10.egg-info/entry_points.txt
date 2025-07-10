@@ -1,0 +1,6 @@
+[console_scripts]
+get_robot_pose = fishbot_application.get_robot_pose:main
+init_robot_pose = fishbot_application.init_robot_pose:main
+path_controller = fishbot_application.path_controller:main
+path_visualizer = fishbot_application.path_visualizer:main
+

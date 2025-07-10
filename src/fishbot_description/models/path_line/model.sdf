@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <model name='path_line'>
+    <static>1</static>
+    <link name='line_link'>
+      <!-- 主线段 -->
+      <visual name='main_line'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2.0 0.05 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Yellow</name>
+          </script>
+        </material>
+      </visual>
+      
+      <!-- 虚线效果 - 可选 -->
+      <visual name='dash_1'>
+        <pose>-0.6 0 0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.08 0.025</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+      
+      <visual name='dash_2'>
+        <pose>0 0 0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.08 0.025</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+      
+      <visual name='dash_3'>
+        <pose>0.6 0 0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.08 0.025</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

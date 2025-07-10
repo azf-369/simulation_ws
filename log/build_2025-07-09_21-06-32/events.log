@@ -1,0 +1,65 @@
+[0.000000] (-) TimerEvent: {}
+[0.002542] (-) JobUnselected: {'identifier': 'fishbot_description'}
+[0.003442] (-) JobUnselected: {'identifier': 'fishbot_navigation2'}
+[0.003533] (fishbot_application) JobQueued: {'identifier': 'fishbot_application', 'dependencies': OrderedDict()}
+[0.004477] (fishbot_application) JobStarted: {'identifier': 'fishbot_application'}
+[0.099554] (-) TimerEvent: {}
+[0.207746] (-) TimerEvent: {}
+[0.310567] (-) TimerEvent: {}
+[0.413864] (-) TimerEvent: {}
+[0.518403] (-) TimerEvent: {}
+[0.621911] (-) TimerEvent: {}
+[0.724393] (-) TimerEvent: {}
+[0.832591] (-) TimerEvent: {}
+[0.941678] (-) TimerEvent: {}
+[1.047153] (-) TimerEvent: {}
+[1.149257] (-) TimerEvent: {}
+[1.250667] (-) TimerEvent: {}
+[1.353539] (-) TimerEvent: {}
+[1.462310] (-) TimerEvent: {}
+[1.566865] (-) TimerEvent: {}
+[1.669462] (-) TimerEvent: {}
+[1.777614] (-) TimerEvent: {}
+[1.885524] (-) TimerEvent: {}
+[1.988488] (-) TimerEvent: {}
+[2.089742] (-) TimerEvent: {}
+[2.190616] (-) TimerEvent: {}
+[2.294188] (-) TimerEvent: {}
+[2.397227] (-) TimerEvent: {}
+[2.498611] (-) TimerEvent: {}
+[2.599718] (fishbot_application) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/fishbot_application', 'build', '--build-base', '/home/azf/slam_ws/build/fishbot_application/build', 'install', '--record', '/home/azf/slam_ws/build/fishbot_application/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/azf/slam_ws/src/fishbot_application', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'SVGA_VGPU10': '0', 'LANGUAGE': 'zh_CN:zh', 'USER': 'azf', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:', 'HOME': '/home/azf', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/azf/slam_ws', 'TERM_PROGRAM_VERSION': '1.101.2', 'DESKTOP_SESSION': 'ubuntu-xorg', 'GAZEBO_MASTER_URI': 'http://localhost:11345', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '121234', 'BUNDLED_DEBUGPY_PATH': '/home/azf/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=10c901ec23c2a0f0c956a4846862abf2', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/azf/slam_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'azf', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'azf', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/home/azf/slam_ws/src/fishbot_description/world/aws-robomaker-hospital-world/fuel_models:/home/azf/slam_ws/src/fishbot_description/world/aws-robomaker-hospital-world/models:/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'OGRE_RESOURCE_PATH': '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0', 'PATH': '/opt/ros/humble/bin:/home/azf/.local/bin:/home/azf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/azf/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/azf/.config/Code/User/globalStorage/github.copilot-chat/debugCommand', 'SESSION_MANAGER': 'local/azf-virtual-machine:@/tmp/.ICE-unix/121234,unix/azf-virtual-machine:/tmp/.ICE-unix/121234', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9a10d7c7_073e_475f_b269_18786b1134f8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/azf/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-59a41bb9ca67f541.txt', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-ad4854e5e3.sock', 'GNOME_TERMINAL_SERVICE': ':1.357', 'TERM_PROGRAM': 'vscode', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/azf/slam_ws/install/fishbot_navigation2:/home/azf/slam_ws/install/fishbot_description:/home/azf/slam_ws/install/fishbot_application:/opt/ros/humble', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GAZEBO_RESOURCE_PATH': '/usr/share/gazebo-11:/usr/share/gazebo-11:', 'GAZEBO_MODEL_DATABASE_URI': 'http://models.gazebosim.org', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/azf/slam_ws/build/fishbot_application', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'GAZEBO_PLUGIN_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=10c901ec23c2a0f0c956a4846862abf2', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/azf/slam_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/azf/slam_ws/install/fishbot_application/lib/python3.10/site-packages:/home/azf/slam_ws/install/fishbot_application/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/azf/slam_ws/install/fishbot_navigation2:/home/azf/slam_ws/install/fishbot_description'}, 'shell': False}
+[2.617544] (-) TimerEvent: {}
+[2.719648] (-) TimerEvent: {}
+[2.826002] (-) TimerEvent: {}
+[2.927479] (-) TimerEvent: {}
+[3.028696] (-) TimerEvent: {}
+[3.129667] (-) TimerEvent: {}
+[3.231925] (-) TimerEvent: {}
+[3.332607] (-) TimerEvent: {}
+[3.395030] (fishbot_application) StdoutLine: {'line': b'running egg_info\n'}
+[3.395521] (fishbot_application) StdoutLine: {'line': b'writing ../../build/fishbot_application/fishbot_application.egg-info/PKG-INFO\n'}
+[3.396185] (fishbot_application) StdoutLine: {'line': b'writing dependency_links to ../../build/fishbot_application/fishbot_application.egg-info/dependency_links.txt\n'}
+[3.396521] (fishbot_application) StdoutLine: {'line': b'writing entry points to ../../build/fishbot_application/fishbot_application.egg-info/entry_points.txt\n'}
+[3.396859] (fishbot_application) StdoutLine: {'line': b'writing requirements to ../../build/fishbot_application/fishbot_application.egg-info/requires.txt\n'}
+[3.397139] (fishbot_application) StdoutLine: {'line': b'writing top-level names to ../../build/fishbot_application/fishbot_application.egg-info/top_level.txt\n'}
+[3.421698] (fishbot_application) StdoutLine: {'line': b"reading manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'\n"}
+[3.427303] (fishbot_application) StdoutLine: {'line': b"writing manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'\n"}
+[3.432062] (fishbot_application) StdoutLine: {'line': b'running build\n'}
+[3.432288] (fishbot_application) StdoutLine: {'line': b'running build_py\n'}
+[3.432936] (-) TimerEvent: {}
+[3.433736] (fishbot_application) StdoutLine: {'line': b'running install\n'}
+[3.434071] (fishbot_application) StdoutLine: {'line': b'running install_lib\n'}
+[3.434267] (fishbot_application) StdoutLine: {'line': b'running install_data\n'}
+[3.434453] (fishbot_application) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.439885] (fishbot_application) StdoutLine: {'line': b"removing '/home/azf/slam_ws/install/fishbot_application/lib/python3.10/site-packages/fishbot_application-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[3.440220] (fishbot_application) StdoutLine: {'line': b'Copying ../../build/fishbot_application/fishbot_application.egg-info to /home/azf/slam_ws/install/fishbot_application/lib/python3.10/site-packages/fishbot_application-0.0.0-py3.10.egg-info\n'}
+[3.447002] (fishbot_application) StdoutLine: {'line': b'running install_scripts\n'}
+[3.513992] (fishbot_application) StdoutLine: {'line': b'Installing get_robot_pose script to /home/azf/slam_ws/install/fishbot_application/lib/fishbot_application\n'}
+[3.514617] (fishbot_application) StdoutLine: {'line': b'Installing init_robot_pose script to /home/azf/slam_ws/install/fishbot_application/lib/fishbot_application\n'}
+[3.515729] (fishbot_application) StdoutLine: {'line': b'Installing path_controller script to /home/azf/slam_ws/install/fishbot_application/lib/fishbot_application\n'}
+[3.516135] (fishbot_application) StdoutLine: {'line': b'Installing path_visualizer script to /home/azf/slam_ws/install/fishbot_application/lib/fishbot_application\n'}
+[3.517241] (fishbot_application) StdoutLine: {'line': b"writing list of installed files to '/home/azf/slam_ws/build/fishbot_application/install.log'\n"}
+[3.533324] (-) TimerEvent: {}
+[3.562609] (fishbot_application) CommandEnded: {'returncode': 0}
+[3.617484] (fishbot_application) JobEnded: {'identifier': 'fishbot_application', 'rc': 0}
+[3.628664] (-) EventReactorShutdown: {}

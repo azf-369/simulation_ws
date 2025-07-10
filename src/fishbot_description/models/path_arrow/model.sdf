@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <model name='path_arrow'>
+    <static>1</static>
+    <link name='arrow_link'>
+      <!-- 箭头主体 -->
+      <visual name='arrow_body'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.0 0.1 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Orange</name>
+          </script>
+        </material>
+      </visual>
+      
+      <!-- 箭头头部 -->
+      <visual name='arrow_head'>
+        <pose>0.6 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.4 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Orange</name>
+          </script>
+        </material>
+      </visual>
+      
+      <!-- 箭头羽毛1 -->
+      <visual name='arrow_feather_1'>
+        <pose>-0.4 0.15 0 0 0 0.5236</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.05 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Orange</name>
+          </script>
+        </material>
+      </visual>
+      
+      <!-- 箭头羽毛2 -->
+      <visual name='arrow_feather_2'>
+        <pose>-0.4 -0.15 0 0 0 -0.5236</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.05 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Orange</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
