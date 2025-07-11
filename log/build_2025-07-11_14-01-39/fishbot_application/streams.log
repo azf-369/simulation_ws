@@ -1,0 +1,27 @@
+[2.058s] Invoking command in '/home/azf/simulation_ws/src/fishbot_application': PYTHONPATH=/home/azf/simulation_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/azf/simulation_ws/install/fishbot_application/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/azf/simulation_ws/build/fishbot_application/build install --record /home/azf/simulation_ws/build/fishbot_application/install.log --single-version-externally-managed install_data
+[2.927s] running egg_info
+[2.928s] writing ../../build/fishbot_application/fishbot_application.egg-info/PKG-INFO
+[2.928s] writing dependency_links to ../../build/fishbot_application/fishbot_application.egg-info/dependency_links.txt
+[2.928s] writing entry points to ../../build/fishbot_application/fishbot_application.egg-info/entry_points.txt
+[2.928s] writing requirements to ../../build/fishbot_application/fishbot_application.egg-info/requires.txt
+[2.931s] writing top-level names to ../../build/fishbot_application/fishbot_application.egg-info/top_level.txt
+[2.941s] reading manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[2.945s] writing manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[2.946s] running build
+[2.946s] running build_py
+[2.948s] copying fishbot_application/path_visualizer.py -> /home/azf/simulation_ws/build/fishbot_application/build/lib/fishbot_application
+[2.953s] running install
+[2.954s] running install_lib
+[2.957s] copying /home/azf/simulation_ws/build/fishbot_application/build/lib/fishbot_application/path_visualizer.py -> /home/azf/simulation_ws/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.959s] byte-compiling /home/azf/simulation_ws/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/path_visualizer.py to path_visualizer.cpython-310.pyc
+[2.983s] running install_data
+[2.984s] running install_egg_info
+[2.991s] removing '/home/azf/simulation_ws/install/fishbot_application/lib/python3.10/site-packages/fishbot_application-0.0.0-py3.10.egg-info' (and everything under it)
+[2.991s] Copying ../../build/fishbot_application/fishbot_application.egg-info to /home/azf/simulation_ws/install/fishbot_application/lib/python3.10/site-packages/fishbot_application-0.0.0-py3.10.egg-info
+[2.995s] running install_scripts
+[3.083s] Installing get_robot_pose script to /home/azf/simulation_ws/install/fishbot_application/lib/fishbot_application
+[3.091s] Installing init_robot_pose script to /home/azf/simulation_ws/install/fishbot_application/lib/fishbot_application
+[3.094s] Installing path_controller script to /home/azf/simulation_ws/install/fishbot_application/lib/fishbot_application
+[3.096s] Installing path_visualizer script to /home/azf/simulation_ws/install/fishbot_application/lib/fishbot_application
+[3.098s] writing list of installed files to '/home/azf/simulation_ws/build/fishbot_application/install.log'
+[3.145s] Invoked command in '/home/azf/simulation_ws/src/fishbot_application' returned '0': PYTHONPATH=/home/azf/simulation_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/azf/simulation_ws/install/fishbot_application/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/azf/simulation_ws/build/fishbot_application/build install --record /home/azf/simulation_ws/build/fishbot_application/install.log --single-version-externally-managed install_data

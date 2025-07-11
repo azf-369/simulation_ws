@@ -32,10 +32,10 @@ class PathVisualizerNode(Node):
         self.path_points = []
         self.path_entities = []
         
-        self.get_logger().info('路径可视化节点已启动 - 简洁地面路径模式')
+        self.get_logger().info('路径可视化节点已启动')
         self.get_logger().info('可用命令:')
-        self.get_logger().info('  - "show_path" / "show_floor_path": 显示地面路径（仅连接线）')
-        self.get_logger().info('  - "show_painted_path": 显示涂色地板路径（仅连接线）')
+        self.get_logger().info('  - "show_path" / "show_floor_path": 显示地面路径')
+        self.get_logger().info('  - "show_painted_path": 显示涂色地板路径')
         self.get_logger().info('  - "hide_path": 隐藏路径')
         self.get_logger().info('  - "clear_path": 清除所有路径')
         self.get_logger().info('  - "demo_path": 创建示例路径')
@@ -83,10 +83,18 @@ class PathVisualizerNode(Node):
     
     def hide_current_path(self):
         """隐藏当前路径"""
+        if not self.path_entities:
+            return
+            
         for entity_name in self.path_entities:
             self.delete_entity(entity_name)
         
         self.path_entities.clear()
+        
+        # 等待删除操作完成
+        import time
+        time.sleep(0.5)
+        
         self.get_logger().info('路径已隐藏')
         self.publish_status("路径已隐藏")
     
@@ -165,6 +173,9 @@ class PathVisualizerNode(Node):
             self.get_logger().warn('至少需要2个路径点才能显示路径')
             return
         
+        # 先隐藏现有路径
+        self.hide_current_path()
+        
         # 显示地面连接线
         for i in range(len(self.path_points) - 1):
             self.spawn_floor_path_line(i, self.path_points[i], self.path_points[i + 1])
@@ -176,15 +187,19 @@ class PathVisualizerNode(Node):
         """生成地面路径连接线（带状贴花效果）"""
         entity_name = f"floor_path_line_{index}"
         
-        # 计算线段的中心点、长度和角度
+        # 计算基础长度和角度
+        base_length = math.sqrt((point2[0] - point1[0])**2 + 
+                               (point2[1] - point1[1])**2)
+        angle = math.atan2(point2[1] - point1[1], point2[0] - point1[0])
+        
+        # 使用更大的重叠，确保路径段完全覆盖从点1到点2
+        overlap_extension = base_length * 0.2  # 增加20%的重叠
+        extended_length = base_length + overlap_extension
+        
+        # 使用原始的中心点，不进行偏移
         center_x = (point1[0] + point2[0]) / 2
         center_y = (point1[1] + point2[1]) / 2
         center_z = 0.0005
-        
-        length = math.sqrt((point2[0] - point1[0])**2 + 
-                          (point2[1] - point1[1])**2)
-        
-        angle = math.atan2(point2[1] - point1[1], point2[0] - point1[0])
         
         sdf_content = f"""
         <sdf version="1.6">
@@ -196,7 +211,7 @@ class PathVisualizerNode(Node):
               <visual name="main_path">
                 <geometry>
                   <box>
-                    <size>{length} 0.4 0.001</size>
+                    <size>{extended_length} 0.4 0.001</size>
                   </box>
                 </geometry>
                 <material>
@@ -223,6 +238,9 @@ class PathVisualizerNode(Node):
             self.get_logger().warn('至少需要2个路径点才能显示路径')
             return
         
+        # 先隐藏现有路径
+        self.hide_current_path()
+        
         # 创建连续的地面涂色路径
         for i in range(len(self.path_points) - 1):
             self.spawn_painted_floor_segment(i, self.path_points[i], self.path_points[i + 1])
@@ -234,13 +252,18 @@ class PathVisualizerNode(Node):
         """生成涂色地板路径段"""
         entity_name = f"painted_floor_segment_{index}"
         
-        # 计算路径段参数
+        # 计算基础长度和角度
+        base_length = math.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2)
+        angle = math.atan2(point2[1] - point1[1], point2[0] - point1[0])
+        
+        # 使用更大的重叠，确保路径段完全覆盖从点1到点2
+        overlap_extension = base_length * 0.2  # 增加20%的重叠
+        extended_length = base_length + overlap_extension
+        
+        # 使用原始的中心点，不进行偏移
         center_x = (point1[0] + point2[0]) / 2
         center_y = (point1[1] + point2[1]) / 2
         center_z = 0.0001  # 极薄贴在地面
-        
-        length = math.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2)
-        angle = math.atan2(point2[1] - point1[1], point2[0] - point1[0])
         
         # 创建纯蓝色路径效果
         sdf_content = f"""
@@ -253,7 +276,7 @@ class PathVisualizerNode(Node):
               <visual name="base_paint">
                 <geometry>
                   <box>
-                    <size>{length} 0.6 0.0001</size>
+                    <size>{extended_length} 0.6 0.0001</size>
                   </box>
                 </geometry>
                 <material>

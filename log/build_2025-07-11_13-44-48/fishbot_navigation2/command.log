@@ -1,0 +1,2 @@
+Invoking command in '/home/azf/simulation_ws/build/fishbot_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/azf/simulation_ws/install/fishbot_application:/opt/ros/humble /usr/bin/cmake --build /home/azf/simulation_ws/build/fishbot_navigation2 -- -j32 -l32
+Invoked command in '/home/azf/simulation_ws/build/fishbot_navigation2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/azf/simulation_ws/install/fishbot_application:/opt/ros/humble /usr/bin/cmake --build /home/azf/simulation_ws/build/fishbot_navigation2 -- -j32 -l32

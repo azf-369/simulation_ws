@@ -83,10 +83,18 @@ class PathVisualizerNode(Node):
     
     def hide_current_path(self):
         """隐藏当前路径"""
+        if not self.path_entities:
+            return
+            
         for entity_name in self.path_entities:
             self.delete_entity(entity_name)
         
         self.path_entities.clear()
+        
+        # 等待删除操作完成
+        import time
+        time.sleep(0.5)
+        
         self.get_logger().info('路径已隐藏')
         self.publish_status("路径已隐藏")
     
@@ -165,6 +173,9 @@ class PathVisualizerNode(Node):
             self.get_logger().warn('至少需要2个路径点才能显示路径')
             return
         
+        # 先隐藏现有路径
+        self.hide_current_path()
+        
         # 显示地面连接线
         for i in range(len(self.path_points) - 1):
             self.spawn_floor_path_line(i, self.path_points[i], self.path_points[i + 1])
@@ -222,6 +233,9 @@ class PathVisualizerNode(Node):
         if len(self.path_points) < 2:
             self.get_logger().warn('至少需要2个路径点才能显示路径')
             return
+        
+        # 先隐藏现有路径
+        self.hide_current_path()
         
         # 创建连续的地面涂色路径
         for i in range(len(self.path_points) - 1):
