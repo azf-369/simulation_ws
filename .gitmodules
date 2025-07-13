@@ -1,0 +1,3 @@
+[submodule "src/fishbot_description/world/aws-robomaker-hospital-world"]
+	path = src/fishbot_description/world/aws-robomaker-hospital-world
+	url = https://github.com/aws-robotics/aws-robomaker-hospital-world.git
