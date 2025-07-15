@@ -3,6 +3,7 @@
 ## step 1: start gazebo:
 
 ### 构建:
+#### 如果编译失败，可选： rm -rf build install log
 colcon build
 
 ### 设置环境

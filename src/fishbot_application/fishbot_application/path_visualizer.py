@@ -162,71 +162,6 @@ class PathVisualizerNode(Node):
         msg = String()
         msg.data = status
         self.status_publisher.publish(msg)
-
-    def show_floor_path(self):
-        """显示地面路径（仅连接线）"""
-        if not self.path_points:
-            self.get_logger().warn('没有路径点可显示')
-            return
-        
-        if len(self.path_points) < 2:
-            self.get_logger().warn('至少需要2个路径点才能显示路径')
-            return
-        
-        # 先隐藏现有路径
-        self.hide_current_path()
-        
-        # 显示地面连接线
-        for i in range(len(self.path_points) - 1):
-            self.spawn_floor_path_line(i, self.path_points[i], self.path_points[i + 1])
-        
-        self.get_logger().info('地面路径已显示（仅连接线）')
-        self.publish_status("地面路径已显示")
-    
-    def spawn_floor_path_line(self, index, point1, point2):
-        """生成地面路径连接线（带状贴花效果）"""
-        entity_name = f"floor_path_line_{index}"
-        
-        # 计算基础长度和角度
-        base_length = math.sqrt((point2[0] - point1[0])**2 + 
-                               (point2[1] - point1[1])**2)
-        angle = math.atan2(point2[1] - point1[1], point2[0] - point1[0])
-        
-        # 使用更大的重叠，确保路径段完全覆盖从点1到点2
-        overlap_extension = base_length * 0.2  # 增加20%的重叠
-        extended_length = base_length + overlap_extension
-        
-        # 使用原始的中心点，不进行偏移
-        center_x = (point1[0] + point2[0]) / 2
-        center_y = (point1[1] + point2[1]) / 2
-        center_z = 0.0005
-        
-        sdf_content = f"""
-        <sdf version="1.6">
-          <model name="{entity_name}">
-            <static>true</static>
-            <pose>{center_x} {center_y} {center_z} 0 0 {angle}</pose>
-            <link name="link">
-              <!-- 纯蓝色路径带 -->
-              <visual name="main_path">
-                <geometry>
-                  <box>
-                    <size>{extended_length} 0.4 0.001</size>
-                  </box>
-                </geometry>
-                <material>
-                  <ambient>0 0.5 1 1.0</ambient>
-                  <diffuse>0 0.5 1 1.0</diffuse>
-                  <specular>0.1 0.1 0.1 1</specular>
-                  <emissive>0 0.1 0.2 0</emissive>
-                </material>
-              </visual>
-            </link>
-          </model>
-        </sdf>
-        """
-        
-        self.spawn_entity(entity_name, sdf_content, [center_x, center_y, center_z])
     
     def show_painted_floor_path(self):
         """显示涂色地板路径（仅显示连接线，无节点圆圈）"""
@@ -253,7 +188,7 @@ class PathVisualizerNode(Node):
         entity_name = f"painted_floor_segment_{index}"
         
         # 计算基础长度和角度
-        base_length = math.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2)
+        base_length = math.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2) * 1.78
         angle = math.atan2(point2[1] - point1[1], point2[0] - point1[0])
         
         # 使用更大的重叠，确保路径段完全覆盖从点1到点2
