@@ -1,0 +1,6 @@
+[0.534s] Invoking command in '/home/azf/simulation_ws/build/fishbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/azf/simulation_ws/install/fishbot_application:/opt/ros/humble /usr/bin/cmake --build /home/azf/simulation_ws/build/fishbot_description -- -j32 -l32
+[0.648s] [0mCMake Error: The current CMakeCache.txt directory /home/azf/simulation_ws/build/fishbot_description/CMakeCache.txt is different than the directory /home/azf/slam_ws/build/fishbot_description where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.762s] [0mCMake Error: The source directory "/home/azf/slam_ws/src/fishbot_description" does not exist.
+[0.764s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.779s] gmake: *** [Makefile:226：cmake_check_build_system] 错误 1
+[0.794s] Invoked command in '/home/azf/simulation_ws/build/fishbot_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/azf/simulation_ws/install/fishbot_application:/opt/ros/humble /usr/bin/cmake --build /home/azf/simulation_ws/build/fishbot_description -- -j32 -l32

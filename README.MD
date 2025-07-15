@@ -16,10 +16,12 @@ export GAZEBO_MODEL_PATH=/home/azf/simulation_ws/src/fishbot_description/world/a
 ros2 launch fishbot_description gazebo_sim.launch.py
 
 ## step 2: start path_visualizer node:
+source install/setup.bash
+
 ros2 run fishbot_application path_visualizer
 
-## step 3: 运行 ./test_blue_path.sh 路径可视化:
-./test_blue_path.sh
+## step 3: 运行 ./show_path.sh 路径可视化:
+./show_path.sh
 
 
 ## step 4: 使用path_controller清除路径:
